@@ -42,6 +42,29 @@
 			return $this->db->query("INSERT INTO $table ($k) VALUES($v)");
 		}
 		
+		//Update data
+		public function update($table,$data,$where){
+			if(is_array($where)){
+				foreach($data as $key => $value){
+					$k[] = $key." = '".$value."'";
+				}
+				$k = implode(",",$k);
+			}else{
+				$k = $data;
+			}
+			if(is_array($where)){
+					foreach($where as $key => $value){
+						$w[] = $wkey." = '".$value."'";
+					}
+					$w = implode(" AND ", $w);
+					
+			}else{
+				$w = $where;
+			}
+			
+			return $this->db->query("UPDATE $table SET $k WHERE $w");
+		}
+		
 		
 		
 	}
