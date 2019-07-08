@@ -44,7 +44,7 @@
 		
 		//Update data
 		public function update($table,$data,$where){
-			if(is_array($where)){
+			if(is_array($data)){
 				foreach($data as $key => $value){
 					$k[] = $key." = '".$value."'";
 				}
