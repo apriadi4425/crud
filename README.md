@@ -34,4 +34,12 @@ to update data
 ?>
 ```
 
-for updating data yang can use with array or without array, same as where condition
+for updating data yang can use with array or without array, same as where condition.
+
+to delete data 
+
+```php
+<?php
+ $result = $crud->delete('tablename','where_condition');
+?>
+```
