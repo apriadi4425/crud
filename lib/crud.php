@@ -52,17 +52,26 @@
 			}else{
 				$k = $data;
 			}
-			if(is_array($where)){
-					foreach($where as $key => $value){
+			$w = $this->implode_array($where);
+			return $this->db->query("UPDATE $table SET $k WHERE $w");
+		}
+		
+		public function delete($table,$where){
+			$w = $this->implode_array($where);
+			return $this->db->query("DELETE FROM $table WHERE $w");
+		}
+		
+		function implode_array($array){
+			if(is_array($array)){
+					foreach($array as $key => $value){
 						$w[] = $wkey." = '".$value."'";
 					}
 					$w = implode(" AND ", $w);
 					
 			}else{
-				$w = $where;
+				$w = $array;
 			}
-			
-			return $this->db->query("UPDATE $table SET $k WHERE $w");
+			return $w;
 		}
 		
 		
