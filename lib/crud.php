@@ -29,6 +29,8 @@
 			return $data;
 		}
 		
+		//Insert data
+		
 		public function insert($table,$data){
 			foreach($data as $key => $value){
 				$k[] = $key;
