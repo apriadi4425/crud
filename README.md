@@ -18,7 +18,9 @@ example to insert data you just make..
 ```
 
 remember!!, adjust the name form input to coloumn in your database table
------->Access class Crud<--------
+
+
+# Access class Crud
 
 to call data on index.php
 ```php
