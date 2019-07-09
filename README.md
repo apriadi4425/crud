@@ -3,6 +3,22 @@ simple CRUD OOP PHP
 
 still in process
 
+You can make simple crud with only make a form with post method and send it to process in "/crud/" without define the variable in php like 
+```php 
+$_POST['']; \\no more do this....
+```
+example to insert data you just make..
+
+```html
+<form method = "post" action = "crud/insert.php">
+	<input type="text" name = "title">
+	<input type="date" name = "date">
+	<button type="submit">Kirim</button>
+</form>
+```
+
+remember!!, adjust the name form to coloumn in your database table
+------>Access class Crud<--------
 
 to call data on index.php
 ```php
