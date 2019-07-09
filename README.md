@@ -17,7 +17,7 @@ example to insert data you just make..
 </form>
 ```
 
-remember!!, adjust the name form to coloumn in your database table
+remember!!, adjust the name form input to coloumn in your database table
 ------>Access class Crud<--------
 
 to call data on index.php
